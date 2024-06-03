@@ -1,0 +1,419 @@
+1>What is html?
+HTML stands for Hyper Text Markup Language.it is the standard markup language for creating Web pages
+HTML describes the structure of a Web page.it tells the browser how to display the content
+HTML consists of a series of elements.
+ example::: 
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <title>Page Title</title>
+ </head>
+ <body>
+ 
+ <h1>My First Heading</h1>
+ <p>My first paragraph.</p>
+ 
+ </body>
+ </html>
+
+2>What is use of Doctype ?
+
+The HTML document type declaration, also known as DOCTYPE , is the first line of code required in every HTML or XHTML document.
+ The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. 
+       EXAMPLE::<!DOCTYPE html>
+
+3>What is elements and attributes?
+  
+---ELEMENTS---
+HTML tags are used to hold the HTML element. HTML element holds the content. HTML attributes are used to describe the characteristic of an HTML element in detail.
+ HTML tag starts with < and ends with > Whatever written within a HTML tag are HTML elements.
+  <tagname>Content goes here...</tagname>
+  
+  EXAMPLES::
+  <h1>My First Heading</h1>
+  <p>My first paragraph.</p>
+
+
+---ATTRIBUTES--
+  HTML attributes are used to describe the characteristic of an HTML element in detail.
+  Attributes provide extra information or settings for elements
+
+   THERE ARE TWO TYPES OF ATTRIBUTES::
+   ----ID ATTRIBUTES---
+      used to provide unique id to an element
+      The syntax for id is: write a hash character (#), followed by an id name. 
+      Then, define the CSS properties within curly braces {}.
+      EXAMPLE::
+       <!DOCTYPE html>
+<html>
+<head>
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>
+
+ --CLASS ATTRIBUTES---
+ The class attribute specifies one or more classnames for an element.
+  class is used to provide or denote group element
+  EXAMPLE::
+  <html>
+<head>
+<style>
+h1.intro {
+    color: blue;
+}
+
+p.imp {
+    color: green;
+}
+</style>
+</head>
+<body>
+
+<h1 class="intro">Header 1</h1>
+<p>A paragraph.</p>
+<p class="imp">Note that this is an important paragraph.</p>
+
+</body>
+</html>
+
+4>Explain tags in html
+
+HTML tags are like keywords which defines that how web browser will format and display the content. 
+With the help of tags, a web browser can distinguish between an HTML content and a simple content.
+ HTML tags contain three main parts: opening tag, content and closing tag. But some HTML tags are unclosed tags.
+ All HTML tags must enclosed within < > these brackets.
+ Every tag in HTML perform different tasks.
+ If you have used an open tag <tag>, then you must use a close tag </tag> (except some tags)
+ Syntax::
+ <tag> content </tag>
+ EXAMPLES::
+ <p> Paragraph Tag </p>
+<h2> Heading Tag </h2>
+<b> Bold Tag </b>
+<i> Italic Tag </i>
+<u> Underline Tag</u>
+
+5>Difference between block and inline elements 
+---Block-level Elements---
+A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+
+A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+
+Two commonly used block elements are: <p> and <div>
+    EXAMPLES::
+    <address><article><aside><blockquote><canvas></canvas>
+
+       -- Inline Elements--
+An inline element does not start on a new line.
+
+An inline element only takes up as much width as necessary.
+
+This is a <span> element inside a paragraph.
+    EXAMPLES::
+    <a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em></em>
+
+6>Difference between semantics and non semnatics elements
+Semantic HTML elements:
+These elements simply mean, elements with meaning. 
+The reason being, there definition in the code tells the browser and the developer what they are supposed to do. 
+Framing in simpler words, these elements describe the type of content they are supposed to contain.
+Following is the list of some semantic elements :
+article
+aside
+details
+figcaption
+figure
+footer
+
+---Non-Semantic elements--
+Unlike, semantic elements they don’t have any meaning. They don’t tell anything about the content they contain. 
+They can be used with different attributes to mark up semantics common to a group.
+
+Following is the list of some non-semantic elements:
+div
+span
+
+7>Diffference between readonly and disabled 
+disabled Attribute: 
+The disabled attribute is used to disable the input field so that it cannot be edited or submitted. 
+Usually, the color of the input field is greyed out. 
+A disabled input field will not be sent with the form data, so it cannot be submitted to the server, & users are also not able to interact with the input field (data). 
+It is commonly used when an input field is conditionally disabled or when it’s required to prevent user input.
+
+Syntax:
+<input disabled>
+EXAMPLE::
+
+<label for="age">Age:</label>
+<input id="age" name="age" type="number" value="42" disabled/>
+
+readonly Attribute: 
+The readonly attribute is used to disable an input field so that it cannot be edited.
+ But the user can still interact with it. Users can see data but it cannot be changed. 
+ A readonly input field is usually displayed with a different background color or border, indicating that it cannot be edited. 
+The value of a readonly input field can be submitted with the form data.
+EXAMPLE::
+</div>
+<div class="group">
+  <input type="date" value="2020-01-01" readonly="readonly" id="date" />
+  <label for="date">Date</label>
+</div>
+
+8>Use of required attribute 
+The required attribute is a boolean attribute. When present, it specifies that an input field must be filled out before submitting the form.
+This attribute works with other types of input like radio, checkbox, number, text, etc.
+Syntax
+<input required>
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>
+      required Attribute
+  </title>
+    <style>
+        h1,
+        h2 {
+            color: green;
+            font-style: italic;
+        }
+         
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+ 
+<body>
+
+    <h2>
+      HTML input required attribute 
+  </h2>
+    <form>
+        Username:
+        <input type="text"
+               name="username"
+               required>
+        <br> Password:
+        <input type="password"
+               name="password">
+        <br>
+        <input type="submit">
+    </form>
+</body>
+ 
+</html>
+
+
+9>Explain anchor tag and its attributes 
+The <a> tag defines a hyperlink, which is used to link from one page to another.
+ The most important attribute of the <a> element is the href attribute, which indicates the link's destination.
+    Syntax:
+<a href = "link"> Link Name </a> 
+ATTRIBUTES---
+href--Specifies the URL of the page the link goes to
+target--Specifies where to open the linked document
+
+10>How to embed image on webpage 
+he HTML <img> tag is used to embed an image in a web page. Images are not technically inserted into a web page;
+ images are linked to web pages. The <img> tag creates a holding space for the referenced image.
+
+ The <img> tag has two required attributes:
+src - Specifies the path to the image
+alt - Specifies an alternate text for the image
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Image</h2>
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
+</body>
+</html>
+
+11>What is list,types of list and how to display list in html
+A list is just one of many ways of organizing information, and in HTML, there are three types of lists:
+Ordered
+Unordered
+Description
+ORDERED LISTS::
+The Ordered lists have an order which is either numerical or alphabetical.
+The <ol> tag is used to create ordered lists in HTML and just like unordered list, we use <li> tag to define or show lists inside <ol> tag.
+
+    Syntax:
+    
+    <ol>
+       <li>Item1</li>
+       <li>Item2</li>
+       <li>Item3</li>
+    </ol>
+    The ordered list has a type operator which defines what type of order the list will have, like whether the list will start with a numerical value or an alphabetical value. The various ways to use the ordered list, are given below:
+
+    type = “1”: List will start from 1.
+    type = “A”: Here the list will start from A.
+    type = “a”: Here the list will start from lowercase a.
+    type = “I”: The list will start from Roman numbers.
+    type = “i”: TheList will start from lowercase Roman numbers.
+    EXAMPLE::
+    <!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>HTML Lists</title>
+</head>
+ 
+<body>
+   
+    <h4>HTML Ordered List</h4>
+    <h4>Coding Language</h4>
+    <ol>
+        <li>C</li>
+        <li>C++</li>
+        <li>Core-Java</li>
+        <li>Python</li>
+        <li>Javascript</li>
+    </ol>
+</body>
+ 
+</html>
+UNORDERED LIST--
+An Unordered list is used to create a list of related items, in bulleted or unordered format. 
+It starts with the <ul> tag, followed by the <li> tag to show list items inside <ul> tag. 
+
+    Syntax:
+    
+    <ul>
+       <li>Item1</li>
+       ...
+    </ul>
+    We can also use different CSS properties to create a list with different styles. It can have one of the following values :
+
+circle: It gives a circle list item marker.
+square: It gives square as list item marker.
+disc: This is the default filled circular bullet item marker.
+none: This is used to unmark list 
+EXAMPLE::
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>HTML Lists</title>
+</head>
+ 
+<body>
+    
+    <h4>HTML Unordered List</h4>
+    <h4>Coding Language</h4>
+    <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Core-Java</li>
+        <li>Python</li>
+        <li>Javascript</li>
+    </ul>
+</body>
+ 
+</html>
+
+12>How to embed audio and video tag?
+ AUDIO---
+ To embed audio in HTML, we use the <audio> tag.
+ Syntax:
+ <audio>
+     <source src="file_name" type="audio_file_type">
+ </audio>
+ EXAMPLE::
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h2>Click play button to play audio</h2>
+<audio src="./test.mp3" controls></audio>
+</body>
+</html>
+
+VIDEO--
+To embed video in HTML, we use the <video> tag. 
+    It contains one or more video sources at a time using <source> tag. It supports MP4, WebM, and Ogg in all modern browsers. 
+    Syntax--
+<video>
+    <source src="file_name" type="video_file_type">
+</video>
+ EXAMPLE::
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h2>Click play button to play video</h2>
+<video src="./test.mp4" controls></video>
+</body>
+</html>
+
+13>What is iframe?
+The <iframe> tag specifies an inline frame.
+    An inline frame is used to embed another document within the current HTML document.
+    Syntax
+    <iframe src="url" title="description"></iframe>
+    EXAMPLE::
+    <!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Iframes</h2>
+<p>You can use the height and width attributes to specify the size of the iframe:</p>
+
+<iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe>
+
+</body>
+</html>
+
+14>Semantics tag-- header,fo
+HTML <header> Element
+    The <header> element represents a container for introductory content or a set of navigational links.
+    
+    A <header> element typically contains:
+   >one or more heading elements (<h1> - <h6>)
+    >logo or icon
+    >authorship information
+    EXAMPLE::
+    <article>
+        <header>
+          <h1>What Does WWF Do?</h1>
+          <p>WWF's mission:</p>
+        </header>
+        <p>WWF's mission is to stop the degradation of our planet's natural environment,
+        and build a future in which humans live in harmony with nature.</p>
+      </article>
+
+     ... HTML <footer> Element
+        The <footer> element defines a footer for a document or section.
+        A <footer> element typically contains:
+      authorship information
+        copyright information
+        contact information
+        sitemap
+        back to top links
+        related documents
+Example:::
+A footer section in a document:
+
+<footer>
+  <p>Author: Hege Refsnes</p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
